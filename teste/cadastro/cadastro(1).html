@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  
+  <link rel="stylesheet" href="cadastro.css">
+
+  <title>Login</title>
+</head>
+<body>
+  <main id="container">
+    <form id="login_form" method="post" name="login_form" > 
+      <div id="form_header">
+        <h1>Login</h1>
+  </div>
+  
+  <div id="social_media">
+    <a href="#">
+      <img src="imgs/icons8-facebook-48.png" alt="Facebook">
+    </a>
+    <a href="#">
+    <img src="imgs/icons8-google-logo-48.png" alt="Google">
+  </a>
+  <a href="#">
+  <img src="imgs/icons8-github-50.png" alt="Github">
+</a>
+  </div>
+
+   <div id="inputs">
+      
+    <div class="input-box">
+      <label for="name">
+        Nome
+        <div class="input-field">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="name" name="name" class="inputUser">
+        </div>
+      </label>
+    </div>
+
+  <div class="input-box">
+    <label for="email">
+      E-mail
+      <div class="input-field">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="email" name="email" class="inputUser">
+      </div>
+    </label>
+  </div>
+
+  <div class="input-box">
+    <label for="password">
+      Senha
+      <div class="input-field">
+        <i class="fa-solid fa-key"></i>
+        <input type="password" id="password" name="passoword" class="inputUser">
+      </div>
+    </label>
+  <div class="forgot_password">
+    <a href="#">
+      Esqueçeu á Senha?
+    </a>
+  </div>
+  </div>
+
+  <button type="submit" onclick="enviar()" id="login_button">
+    Entrar
+  </button>
+</form>
+</main>
+
+<script>
+   async function enviar(){
+        const form = document.querySelector('#login_form');
+        const Nome = document.querySelector('#name').value;
+        const Email = document.querySelector('#email').value;
+        const Senha = document.querySelector('#password').value;
+
+        const baseData = {
+            Nome: Nome,
+            Email: Email,
+            Senha: Senha,
+        };
+        alert(baseData);
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+
+            const requestOptions = {
+                method: "POST",
+                mode:'no-cors',
+                headers:{
+                    'Accept':'*/*',
+                    'Content-Type':'application/x-www-form-urlencoded',
+                    'Access-Control-Allow-Origin': '*',
+                },
+                body: new URLSearchParams(baseData).toString()
+            };
+            const response = await fetch("http://localhost:8080/gravador", requestOptions)
+                .then((response)=>{
+                    console.log(JSON.stringify(response));
+                    window.location.assign("paginaincial.html");
+                    if (!response.ok) {
+                        throw new Error(`Response status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then((data)=>{
+                    console.log(data);
+                })
+                .catch((error)=>{
+                    console.log(error);
+                })
+            ;    
+
+          });
+        }
+</script>
+
+</body>
+</html>>
