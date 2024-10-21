@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    box-sizing: border-box;
+
+
+
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: #05121f;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+
+
+/* Inicio dos  jogos*/
+
+
+.main {
+  display: flex;
+}
+
+ 
+ul {
+
+  width: 200px;
+  list-style-type: none;
+}
+li {
+  background: black;
+  border: 5px solid;
+  border-radius: 3px;
+}
+
+.foto a{
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(156, 155, 155);
+}
+.data a{
+  text-decoration: none;
+  font-size: 13px;
+  color: gray;
+}
+
+.nota{
+  position: absolute;
+  margin-left: 115px;
+  margin-top: 227px;
+}
+.nota a{
+  color: #F9F9F9;
+  font-size: 15px;
+}
+
+
+.iframe {
+  width: 100%;
+}
+
+#entrar{
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 83%;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 20px 30px;
+  transition: all 0.3s ease-in-out ;
+}
+
+/* paginação */
+
+
+
+
+.pagination{
+  text-decoration: none;
+  position: absolute;
+  margin-left: 415px;
+  margin-top: 30%;
+   text-align: center;
+}
+.pagination a{
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  column-gap: 12px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.pagination{
+  padding: 20px;
+  border-radius: 8px;
+  column-gap: 12px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+.pagination:hover {
+  color: #4070f4;
+  background: white;
+}
+.pagination.active {
+  color: #4070f4;
+  background: #fff;
+}
+
+.pagination a:hover :not(.active){
+align-self: start;
+}
