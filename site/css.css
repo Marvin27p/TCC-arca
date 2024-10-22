@@ -80,20 +80,21 @@ li {
 .pagination{
   text-decoration: none;
   position: absolute;
-  margin-left: 415px;
-  margin-top: 30%;
+  margin-left: 475px;
+  margin-top: 2%;
    text-align: center;
 }
 .pagination a{
   text-decoration: none;
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   column-gap: 12px;
+  color: rgb(16, 16, 17);
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 .pagination{
-  padding: 20px;
+  padding: 15px;
   border-radius: 8px;
   column-gap: 12px;
   background: #fff;
@@ -101,12 +102,11 @@ li {
 
 }
 .pagination:hover {
-  color: #4070f4;
   background: white;
 }
 .pagination.active {
   color: #4070f4;
-  background: #fff;
+  background: gray;
 }
 
 .pagination a:hover :not(.active){
