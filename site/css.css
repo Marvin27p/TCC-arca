@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+    box-sizing: border-box;
+
+
+
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: #05121f;
+    font-family: "Montserrat", sans-serif;
+
+}
+.navbar{
+  margin-right: 60px;
+  margin-left: 30px;
+  margin-top: 15px;
+  border-radius: 16px;
+  padding: 0px;
+  border: 2px solid #070707;
+  background-color: #0f0f0f;
+  flex-flow: row wrap;
+  align-items: center;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+
+}
+
+#end{
+  
+  text-decoration: none;
+  font-size: 25px;
+  margin: 20px 66px ;
+  background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  background-clip: text ;
+  -webkit-text-fill-color: transparent ;
+}
+.logo{
+  display: flex;
+  margin-left: 20px;
+}
+
+.menu{
+margin-left: 30px;
+margin-right: 55px;
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 15px;
+  transition: all 0.3s ease-out ;
+
+}
+.menu a:hover{
+  color: rgb(16, 16, 17);
+
+}
+
+input[type=text]{
+position: relative;
+padding: 15px 40px 15px 20px;
+width: 150px;
+color: #525252;
+font-weight: 100;
+letter-spacing: 2px;
+border: none;
+border-radius: 200px;
+background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
+transition: width 0.4s ease;
+outline: none;
+&:focus{ width: 180px; }
+}
+
+i{
+position: relative;
+left: -40px;
+color: #8233C5;
+}
+
+
+#entrar :hover{
+color: rgb(16, 16, 17);
+
+}
+#entrar {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 1000px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 15px;
+  transition: all 0.3s ease-out ;
+}
+
+/* Fim da navbar*/
+
+
+
+/* Inicio dos  jogos*/
+
+
+.main {
+  margin-top: 50px;
+  display: flex;
+}
+
+ 
+ul {
+
+  width: 200px;
+  list-style-type: none;
+}
+li {
+  background: black;
+  border: 5px solid;
+  border-radius: 3px;
+}
+
+.foto a{
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(156, 155, 155);
+}
+.data a{
+  text-decoration: none;
+  font-size: 13px;
+  color: gray;
+}
+
+.nota{
+  position: absolute;
+  margin-left: 115px;
+  margin-top: 227px;
+}
+.nota a{
+  color: #F9F9F9;
+  font-size: 15px;
+}
+
+
+
+
+/* paginação */
+
+
+
+
+.pagination{
+  text-decoration: none;
+  position: absolute;
+  margin-left: 475px;
+  margin-top: 2%;
+   text-align: center;
+}
+.pagination a{
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 8px;
+  column-gap: 12px;
+  color: rgb(16, 16, 17);
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.pagination{
+  padding: 15px;
+  border-radius: 8px;
+  column-gap: 12px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+}
+.pagination:hover {
+  background: white;
+}
+.pagination.active {
+  color: #4070f4;
+  background: gray;
+}
+
+.pagination a:hover :not(.active){
+align-self: start;
+}
