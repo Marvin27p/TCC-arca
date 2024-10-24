@@ -8,4 +8,9 @@ module.exports = {
     
     return response.json(cadastrar);
   },
+  async loginUsuario(request, response) {
+    const usuario = new Usuario(request.body);
+    console.log(request.body);
+  
+  }
 };

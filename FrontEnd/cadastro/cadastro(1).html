@@ -97,7 +97,7 @@
                 },
                 body: new URLSearchParams(baseData).toString()
             };
-            const response = await fetch("http://localhost:8080/gravador", requestOptions)
+            const response = await fetch("http://localhost:8080/login", requestOptions)
                 .then((response)=>{
                     console.log(JSON.stringify(response));
                     window.location.assign("paginaincial.html");
