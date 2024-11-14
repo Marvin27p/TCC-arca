@@ -9,6 +9,17 @@ class Usuario {
 
   async cadastrar() {
     try {
+      const usuarioExistente = await conectar("usuario")
+        .where({Email: this.Email})
+        .first();
+
+        if(usuarioExistente) {
+          return {
+            success: false,
+            message: 'Erro no cadastro'
+          };
+        }
+
       const [cadastro] = await conectar("usuario")
         .insert({
           Nome: this.Nome,
@@ -16,11 +27,17 @@ class Usuario {
           Senha: this.Senha,
         })
         .returning("nome");
-      return cadastro;
+      return {
+        success: true,
+        data: cadastro
+      };
     } catch (error) {
-      return error;
+      return {
+        success: false,
+        message: 'Erro ao cadastrar usuario'
+      };
     } finally {
-      conectar.destroy;
+      conectar.destroy();
     }
   }
 }
